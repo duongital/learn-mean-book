@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/index.js"></script>
+    <title>Mean Stack</title>
+</head>
+
+<body>
+    <div id="home">
+        <h1>Book Shelf</h1>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <div id="table">
+                <table>
+                    <tr>
+                        <td><strong>Title</strong></td>
+                        <td><strong>Author</strong></td>
+                        <td><strong>Pages</strong></td>
+                        <td>
+                            <!-- <button class="buttons" ng-click="">Save</button> -->
+                        </td>
+                    </tr>
+                    <tr ng-repeat="book in Books" ng-init="view=false">
+                        <td>
+                            <p ng-if="!view">{{book.title}} </p>
+                            <input value={{book.pages}} ng-model="Books[$index].title" ng-if="view">
+                        </td>
+                        <td>
+                            <p ng-if="!view">{{book.author}}</p>
+                            <input value={{book.pages}} ng-model="Books[$index].author" ng-if="view">
+                        </td>
+                        <td>
+                            <p ng-if="!view">{{book.pages}}</p>
+                            <input value={{book.pages}} ng-model="Books[$index].pages" ng-if="view">
+                        </td>
+                        <td>
+                            <button ng-show="!view" id="editBook" ng-click="view = true">E</button>
+                            <button ng-show="view" id="okBook"  ng-click="view = false; updateBook($index)">OK</button>
+                            <button id= "deleteBook"  ng-click="deleteBook($index)">D</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input ng-model="title"></td>
+                        <td><input ng-model="author"></td>
+                        <td><input ng-model="pages"></td>
+                        <td>
+                            <button class="buttons" ng-click="addBook(title, author, pages)">Add</button>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

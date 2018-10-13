@@ -1,0 +1,87 @@
+body, h1, p, td, tr {
+    font-family: 'Raleway', sans-serif;
+}
+
+#home {
+    width: 90%;
+    margin: 0 auto; 
+}
+
+table, td, tr {
+    border: 1px solid rgb(51, 53, 51);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.buttons {
+    padding: 15px 20px;
+    width: 100px;
+    background: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.buttons:hover {
+    background: rgb(49, 49, 49);
+}
+
+.buttons:active {
+    transition: all 0.2s;
+    transform: scale(1.1, 1.1);
+}
+
+tr td:last-child {
+    background:white
+}
+
+.editButton {
+    background: green;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+    
+}
+
+#deleteBook {
+    display: inline;
+    text-align: center;
+    float: right;
+    border: none;
+    background: crimson;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: white;
+}
+
+#editBook {
+    display: inline;
+    text-align: center;
+    float: left;
+    border: none;
+    background: lightblue;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: white;
+}
+
+#okBook {
+    display: inline;
+    text-align: center;
+    float: left;
+    border: none;
+    background: lightblue;
+    border-radius: 5px;
+    padding: 15px 10px;
+    color: white;
+}
