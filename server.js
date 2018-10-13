@@ -129,8 +129,8 @@ app.put('/book/:number', function (req, res) {
     res.send("update book");
 })
 
-//START A SERVER AT PORT 7070 nodemon .\server.js
-app.listen(7070, function () {
+//START A SERVER AT PORT 6060 nodemon .\server.js
+app.listen(6060, function () {
     console.log("Calling app.listen's callback function.");
     var host = this.address().address;
     var port = this.address().port;
